@@ -1,0 +1,222 @@
+    1  apt-get update
+    2  mc
+    3  apt-get update
+    4  apt-get upgrade
+    5  docker
+    6  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    7  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    8  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    9  sudo apt update
+   10  apt-cache policy docker-ce
+   11  sudo apt install docker-ce
+   12  sudo systemctl status docker
+   13  sudo usermod -aG docker ${master}
+   14  sudo usermod -aG docker master
+   15  exit
+   16  sudo usermod -aG docker ${docker}
+   17  su - ${docker}
+   18  exit
+   19  logout 
+   20  exit
+   21  passwd root
+   22  ifconfig 
+   23  mc
+   24  reboot
+   25  mc
+   26  docker search nginx
+   27  docker pull nginx
+   28  docker run -d -p 5000:80 nginx
+   29  nano dockerfile 
+   30  docker build -t bell:v1 .
+   31  docker ps
+   32  docker stop 
+   33  docker ps
+   34  docker stop nginx
+   35  docker stop 136c2b421485
+   36  docker ps
+   37  docker build -t bell:v1 .
+   38  nano dockerfile 
+   39  cd /usr/sbin/
+   40  ll
+   41  nano dockerfile 
+   42  mc
+   43  docker build -t bell:v2 .
+   44  nano dockerfile 
+   45  cd /root/
+   46  nano dockerfile 
+   47  docker build -t bell:v2 .
+   48  cat dockerfile 
+   49  docker ps
+   50  docker image
+   51  docker images
+   52  docker run ubuntu:latest -d 
+   53  docker run ubuntu:latest
+   54  docker ps
+   55  docker run ubuntu:16.04 -d
+   56  docker run -d -p 5000:80 bell:v2
+   57  docker run --name docker-nginx -p 5000:80 -d -v ~/docker-nginx/html:/root/default.conf nginx
+   58  cd ~/docker-nginx
+   59  ll
+   60  mc
+   61  docker stop docker-nginx
+   62  docker rm docker-nginx
+   63  docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+   64  docker run --name docker-nginx -p 5000:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+   65  docker ps
+   66  docker image
+   67  docker images
+   68  docker restart docker-nginx
+   69  docker run --name docker-nginx -p 5000:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+   70  docker run --name docker-nginx -p 5100:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+   71  docker stop docker-nginx
+   72  docker rm docker-nginx1
+   73  docker rm docker-nginx
+   74  sudo docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+   75  sudo docker run --name docker-nginx -p 5100:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+   76  docker run --name docker-nginx -p 80:80 nginx:1.10.2-alpine
+   77  docker images
+   78  docker ps -a
+   79  docker rm d72bfa498c51
+   80  docker ps -a
+   81  docker rm 8688d0699b3a
+   82  docker rm 907ee3014ea8
+   83  docker ps -a
+   84  docker rm 136c2b421485
+   85  docker rm 057352bd0759
+   86  docker ps -a
+   87  docker rm 272b62b05a37
+   88  docker rm 91a26abdf58e
+   89  docker rm 947774a2dbd2
+   90  docker ps -a
+   91  docker pull nginx
+   92  docker ps -a
+   93  docker ps
+   94  docker images
+   95  docker run --name docker-nginx -p 5100:80 nginx
+   96  docker run docker-nginx -p 5100:80 nginx
+   97  docker ps -a
+   98  docker run --name docker-nginx -p 5100:80 nginx
+   99  sudo docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  100  docker restart docker-nginx
+  101  docker rm docker-nginx
+  102  docker stop docker-nginx
+  103  ps -a
+  104  docker rm docker-nginx
+  105  docker run --name docker-nginx -p 5000:80 nginx:1.10.2-alpine
+  106  docker restart docker-nginx
+  107  sudo docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  108  sudo docker run --name docker-nginx -p 5000:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  109  sudo docker run --name docker1-nginx -p 5000:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  110  sudo docker run --name docker1-nginx -p 5100:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  111  sudo docker run --name docker3-nginx -p 5100:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  112  docker ps
+  113  docker rm -f 2de322946e25
+  114  docker ps
+  115  docker ps -a
+  116  docker rm -f 2de322946e25
+  117  docker rm -f 75ae29d6d5ff
+  118  docker rm -f 58fe3afb7ebe
+  119  docker ps -a
+  120  docker images 
+  121  docker rm -f bell
+  122  docker rmi bell
+  123  docker rmi image
+  124  docker rmi nginx:latest 
+  125  docker rmi bell:v2 
+  126  docker rmi hello-world:latest 
+  127  docker rmi ubuntu:16.04 
+  128  docker rmi ubuntu:latest 
+  129  docker rmi image
+  130  docker rmi
+  131  docker ps
+  132  docker ps -a
+  133  docker pull nginx
+  134  docker run --name docker-nginx -p 80:80 nginx
+  135  docker ps -a
+  136  docker rm docker-nginx
+  137  cd
+  138  mkdir -p ~/docker-nginx/html
+  139  cd ~/docker-nginx/html
+  140  nano index.html
+  141  sudo docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+  142  cd ~/docker-nginx
+  143  sudo docker cp docker-nginx:/etc/nginx/conf.d/default.conf default.conf
+  144  sudo docker stop docker-nginx
+  145  sudo docker rm docker-nginx
+  146  sudo docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  147  sudo docker restart docker-nginx
+  148  sudo docker run --name docker-nginx -p 580:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  149  docker ps -a
+  150  sudo docker run --name docker-nginx -p 580:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginxklfsdgjlkasdfs/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  151  mc
+  152  sudo docker run --name docker-nginx -p 580:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginxklfsdgjlkasdfs/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  153  sudo docker run --name docker-nginx -p 580:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  154  docker stop docker-nginx
+  155  docker rm docker-nginx
+  156  sudo docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  157  docker stop docker-nginx 
+  158  docker rm docker-nginx
+  159  sudo docker run --name docker-nginx -p 580:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  160  docker stop docker-nginx 
+  161  mc
+  162  sudo docker run --name docker-nginx -p 581:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  163  docker rm docker-nginx
+  164  sudo docker run --name docker-nginx -p 581:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  165  mc
+  166  docker stop docker-nginx 
+  167  docker rm docker-nginx
+  168  sudo docker run --name docker-nginx -p 581:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  169  docker restart docker-nginx
+  170  docker ps
+  171  docker stop docker-nginx 
+  172  docker rm docker-nginx
+  173  mc
+  174  sudo docker run --name docker-nginx -p 581:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  175  mc
+  176  docker restart docker-nginx
+  177  mc
+  178  iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+  179  iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+  180  iptable -F
+  181  iptables -F
+  182  iptables -P INPUT DROP
+  183  iptables -I OUTPUT -o eth0 -d 0.0.0.0/0 -j ACCEPT
+  184  agfasdfasd
+  185  hjk
+  186  iptables -P INPUT DROP
+  187  iptables
+  188  iptables -p FORWARD DROP
+  189  iptables -p forward DROP
+  190  iptables -p OUTPUT ACCEPT
+  191  reboot
+  192  iptables -I INPUT -p tcp --dport 22 -j ACCEPT
+  193  history 
+  194  mc
+  195  sudo docker run --name docker-nginx -p 581:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  196  docker ps
+  197  docker ps -a
+  198  docker stop docker-nginx
+  199  docker rm docker-nginx
+  200  sudo docker run --name docker-nginx -p 581:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  201  mc
+  202  docker stop docker-nginx
+  203  docker rm docker-nginx
+  204  mc
+  205  history 
+  206  ifconfig 
+  207  shutdown -h  now
+  208  history 
+  209  docker run 5000:80 nginx 
+  210  docker ps
+  211  docker ps -a
+  212  docker images
+  213  docker run -d -p 5000:80 nginx
+  214  docker stop nginx
+  215  docler ps
+  216  docker ps
+  217  docker stop peaceful_satoshi
+  218  docker rm peaceful_satoshi 
+  219  sudo docker run --name docker-nginx -p 5000:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+  220  history 
+  221  mc
+  222  history >> /home/bell/history.txt
